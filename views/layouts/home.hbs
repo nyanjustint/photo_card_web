@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <script defer src="/public/js/frontendjs.js"></script>
+
+    <title>{{title}}</title>
+</head>
+
+<body>
+
+
+<div class="view" style="">
+    <div class="full-bg-img">
+            <div class="container text-center">
+
+                {{> header}}
+
+                {{#if (emptyObject messages)}}
+                    {{> flashmessage}}
+                {{/if}}
+
+                {{{body}}}
+
+                {{#if logged}}
+                    <script>
+                        let ele = document.getElementById('logout-button');
+                        if(ele){
+                            ele.onclick = (even) => {
+                                fetch('/users/logout',{
+                                    method:"POST"
+                                })
+                                        .then((data) => {
+                                            console.log(data)
+                                            location.replace('/');
+
+                                        })
+                            }
+                        }
+
+                    </script>
+                {{/if}}
+            </div>
+    </div>
+</div>
+</body>
+{{> footer}}
+</html>
+
+
+

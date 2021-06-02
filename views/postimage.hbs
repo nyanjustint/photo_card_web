@@ -1,0 +1,30 @@
+<div id="main-content" class="card-deck">
+</div>
+
+<div class="login-form" id="">
+
+    <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+        <h2 class="text-center">Post an Image</h2>
+        <label for="input">Title</label>
+        <input type="text" id="input" class="form-control" placeholder="Image Title" required name="title" style="text-align: center;">
+        <br/>
+        <label for="textarea">Description</label>
+        <textarea class="form-control md-textarea" id="textarea" placeholder="Image Description here . . ." rows="4" cols="30" maxlength="230" minlength="5" name="description" required></textarea>
+        <br/>
+        <div class="file-field">
+            <div class="btn btn-primary btn-sm float-left undefined">
+                <span>Upload Image</span>
+                <input type="file" id="fileInput" name="uploadImage" required>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <div class="form-check mb-4">
+            <input type="checkbox" class="form-check-input" id="checkbox" required>
+            <label class="form-check-label" for="checkbox" required>Accept Use Policy</label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    </form>
+</div>
+
+

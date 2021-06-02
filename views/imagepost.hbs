@@ -1,0 +1,34 @@
+
+<div id="main-content" class="card-deck">
+</div>
+
+<div id="post-container">
+    <div id="photo-container">
+        <div ID="post-title" class=" display-6 font-weight-bold"> {{currentPost.title}}</div>
+        <div id="post-info">
+        <p><span class="form-label">Posted by:</span> <span id="post-author">{{currentPost.username}}</span></p>
+        <p><span class="form-label">Post at: </span> <span id="post-date"{{currentPost.created}}</span></p>
+    </div>
+    <div id="post-description" class="lead" > {{currentPost.description}}</div>
+    <img id="post-image" class="img-fluid" src="/{{currentPost.photopath}}" alt="A photo should have been here">
+</div>
+<div id="comment-container">
+<div id="messages">
+    <div id = "message-">
+        <strong class="author-text">@myuser</strong>
+        <span class="date-posted">30 minutes</span>
+        <div class="comment-text">testing for styling</div>
+    </div>
+</div>
+<div id="comment-box">
+<textarea id="comment-box-text" class="form-control" aria-label = "Width textarea"
+          placeholder = "Enter Comment..."></textarea>
+<span id="comment-box-button" class="input-group-text"><svg width="1em" height="1em" viewBox = "0 0 16 16"
+    class ="bi bi-chat-square-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd"
+          d="M2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.411.9 2.533a1 1 0 0 0 1.6 011.9-2.533a1 1 0 0 1 .80.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+
+</svg></span>
+</div>
+</div>
+</div>

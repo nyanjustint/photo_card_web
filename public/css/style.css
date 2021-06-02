@@ -1,0 +1,306 @@
+.login-form {
+  width: 400px;
+  margin: auto auto;
+  padding-top: 5%;
+  padding-bottom: 25%;
+}
+.login-form form {
+
+  background: #f7f7f7;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0);
+  padding: 35px;
+}
+.login-form h2 {
+  margin: 0 0 15px;
+}
+.form-control, .btn {
+  min-height: 38px;
+  border-radius: 2px;
+}
+.btn {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+
+.form-control{
+  height: 40px;
+  box-shadow: none;
+  color: #969fa4;
+}
+.form-control:focus{
+  border-color: #5cb85c;
+}
+.form-control, .btn{
+  border-radius: 3px;
+}
+.signup-form{
+  width: 400px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.signup-form h2{
+  color: darkgrey;
+  margin: 0 0 15px;
+  position: relative;
+  text-align: center;
+}
+.signup-form h2:before, .signup-form h2:after{
+  content: "";
+  height: 2px;
+  width: 30%;
+  background: darkgrey;
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+}
+.signup-form h2:before{
+  left: 0;
+}
+.signup-form h2:after{
+  right: 0;
+}
+.signup-form .hint-text{
+  color: #999;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.signup-form form{
+  color: #999;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  background: whitesmoke;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  padding-bottom: 25%;
+}
+.signup-form .form-group{
+  margin-bottom: 20px;
+}
+.signup-form input[type="checkbox"]{
+  margin-top: 3px;
+}
+.signup-form .btn{
+  font-size: 16px;
+  font-weight: bold;
+  min-width: 140px;
+  outline: none !important;
+}
+.signup-form .row div:first-child{
+  padding-right: 10px;
+}
+.signup-form .row div:last-child{
+  padding-left: 10px;
+}
+.signup-form a{
+  color: #fff;
+  text-decoration: underline;
+}
+.signup-form a:hover{
+  text-decoration: none;
+}
+.signup-form form a{
+  color: #5cb85c;
+  text-decoration: none;
+}
+.signup-form form a:hover{
+  text-decoration: underline;
+}
+
+
+#flash-message {
+  position: fixed;
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%, 0);
+  z-index: 9999;
+}
+
+#flash-message div {
+  text-align: center;
+}
+
+.navbar {
+  background-color: black;
+}
+
+
+.top-nav-collapse {
+  background-color: black;
+}
+#search-button{
+  padding: 4px;
+  outline: auto;
+  background-color: white;
+}
+
+
+
+html,
+body,
+header,
+.view{
+  height: auto;
+  background: teal;
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+#ind {
+  margin: auto auto;
+  padding-top: 5%;
+}
+
+#main-content{
+  grid-area: content;
+  padding-top: .35em;
+  padding-bottom: .35em;
+  display: grid;
+  gap: .2rem .2rem;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 1fr;
+}
+
+
+
+@media screen and (max-width: 700px){
+  #main-content{
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr 1fr;
+  }
+}
+
+
+
+.card{
+  display: grid;
+  grid-template-rows: 106px 90px;
+  grid-template-columns: auto;
+  border: .0625rem solid whitesmoke;
+  border-radius: .25rem;
+  box-shadow: 0 2px 2px white;
+}
+
+.card-image{
+  grid-area: 1/ 1/ 2/ 2;
+}
+
+div[class=card] > img{
+  height:100%;
+  width: 100%;
+}
+
+.card-title{
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-bottom: .1rem;
+  margin-top: 0;
+  padding-top: .1rem;
+}
+
+.card-body {
+  grid-area: 2/1/3/2;
+  padding: .75rem;
+  background-color: white;
+  border-radius: 0 0 .2rem .2rem;
+}
+
+div[class=card-body] > a[class=card-button]{
+  text-decoration: none;
+}
+
+#post-container{
+  grid-area: content;
+  padding-top: 25%;
+  padding-bottom: 35%;
+  display: grid;
+  grid-gap: .2rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  "photoinfo comments";
+}
+
+#photo-container{
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  grid-area: photoinfo;
+}
+#post-info {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+div[id=post-info] >p{
+  margin-bottom: .2em;
+}
+div[post-container] > div[id^=post-]{
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+
+#comment-container {
+  display: grid;
+  justify-self: auto;
+  grid-area: comments;
+  grid-template-rows: auto 75px;
+  grid-template-columns: 1fr;
+  gap: .2rem;
+  grid-template-areas:
+          "messages"
+          "comment-box";
+  max-height: 80vh;
+}
+
+#messages {
+  grid-area: messages;
+  overflow-y: auto;
+  display: flex;
+  flex-flow: column-reverse nowrap;
+  scroll-behavior: smooth;
+  border: 1px solid #cccccc;
+  box-shadow: -2px 2px 4px 4px #e0e0e0;
+  border-radius: .35rem;
+}
+
+div[id^=message-]{
+  display: grid;
+  grid-template-rows: .3fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: .2em;
+  padding: .25rem;
+  margin: .2rem;
+  font-size: 1rem;
+  bordr: .0625rem solidd #ced4da;
+  border-radius: .25rem;
+  grid-template-areas:
+  "author created"
+  "comment comment";
+}
+
+.author-text{
+  grid-area: author;
+  justify-self: start;
+  color: blue;
+}
+
+.comment-text{
+  grid-area: comment;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  max-heigth: 60px;
+  min-height:60px;
+  justify-self: center;
+}
+
+.date-posted {
+  grid-area: created;
+  justify-self: end;
+}
+
+.footer {
+  text-align: center;
+}
